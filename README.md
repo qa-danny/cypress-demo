@@ -1,5 +1,5 @@
 # cypress-demo
-Small demo project for Cypress.  I found a small website that will allow us to run some automated tests against, https://automatedexercise.com.
+Small demo project for Cypress.  I found a small website that will allow us to run some automated tests against, https://automationexercise.com.
 
 I created a few tests following a page object model that will run through 
 
