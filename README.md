@@ -17,4 +17,4 @@ To run a specific test file via the CLI, use the `--spec` flag:
 npx cypress run --spec "cypress/e2e/contact.cy.js"
 ```
 
-^^ This will run the test n headless mode aganst Electron Browser (default confguraton)
+^^ This will run the test in headless mode aganst Electron Browser (default confguraton)
