@@ -7,19 +7,13 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// .type Does not accept empty strings. This custom command allows us to submit empty strings
+// to the input box but performs a "clear" on the text, so it is empty.
+Cypress.Commands.add('safeType', { prevSubject: 'element' }, (subject, text) => {
+  if (text) {
+    cy.wrap(subject).type(text);
+  } else {
+    cy.wrap(subject).clear();
+  }
+});

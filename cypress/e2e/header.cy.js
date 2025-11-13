@@ -1,7 +1,6 @@
 import header from "../pages/header";
-import homepage from "../pages/homepage";
 
-describe('Home Page Tests for Automation Exercise', () => {
+describe('Header Tests for Automation Exercise', () => {
   beforeEach(() => {
     cy.visit('https://automationexercise.com/');
     cy.get('body').should('be.visible');
